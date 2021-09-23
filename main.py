@@ -4,8 +4,10 @@ import os
 from discord.ext import commands
 from dotenv import load_dotenv
 
+prefix = ["c!"]
+
 bot = commands.Bot(
-    command_prefix="c!",
+    command_prefix=prefix,
     strip_after_prefix=True,
     case_insensitive=True
 )
