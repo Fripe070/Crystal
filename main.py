@@ -18,6 +18,8 @@ async def on_command_error(ctx, err):
         await ctx.reply("You do not have the needed permissions to execute this command!")
     elif isinstance(err, commands.MissingPermissions):
         await ctx.reply("You do not have the needed permissions to execute this command!")
+    elif isinstance(err, commands.CommandNotFound):
+        pass
     else:
         try:
             embed = discord.Embed(title="An error occurred!", description=err, colour=0xCC1818)
