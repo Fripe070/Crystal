@@ -33,7 +33,7 @@ class playerinfo(commands.Cog):
                 pastnames.append(f"{name['name']} (<t:{int(int(name['changedToAt'])/1000)}:R>)")
             except Exception:
                 try:
-                    pastnames.append(name['name'])
+                    pastnames.append(f"{name['name']} (original)")
                 except Exception:
                     pass
 
@@ -51,10 +51,18 @@ class playerinfo(commands.Cog):
 
         username = requests.get(url).json()["name"]
 
-        embed_desc = f"**Player name:** {username}\n**UUID:** `{uuid}`\n**Slim:** \n\n"
+        try:
+            if skincape["textures"]["SKIN"]["metadata"] == {"model": "slim"}:
+                playermodel = "Alex"
+            else:
+                playermodel = "Steve"
+        except KeyError:
+            playermodel = "Steve"
+
+        embed_desc = f"**Player name:** {username}\n**UUID:** `{uuid}`\n**Model:** {playermodel} \n\n"
 
         try:
-            embed_desc += f'**Cape url:** {skincape["textures"]["CAPE"]["url"]}'
+            embed_desc += f'**Cape:** [url]({skincape["textures"]["CAPE"]["url"]})'
         except KeyError:
             pass
 
