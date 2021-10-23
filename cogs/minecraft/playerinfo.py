@@ -11,7 +11,7 @@ class playerinfo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @command()
+    @command(aliases=['mcplayer', 'mcuser', "mcusr"])
     async def playerinfo(self, ctx, player):
         url = f"https://api.mojang.com/users/profiles/minecraft/{player}"
 
