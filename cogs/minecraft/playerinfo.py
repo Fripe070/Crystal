@@ -62,7 +62,7 @@ class playerinfo(commands.Cog):
         embed_desc = f"**Player name:** {username}\n**UUID:** `{uuid}`\n**Model:** {playermodel} \n\n"
 
         try:
-            embed_desc += f'**Cape:** [url]({skincape["textures"]["CAPE"]["url"]})'
+            embed_desc += f'**Cape:** [link]({skincape["textures"]["CAPE"]["url"]})'
         except KeyError:
             pass
 
