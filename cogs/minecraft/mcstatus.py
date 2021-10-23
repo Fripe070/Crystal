@@ -39,6 +39,7 @@ class mcstatus(commands.Cog):
                 embed_desc += f"{url}:\n<:Red:894954521862766642> There was an error. Error: {error.response}\n"
 
         embed = discord.Embed(title="Responses from the different minecraft related websites.", description=embed_desc)
+        embed.set_footer(text=f"Command executed by: {ctx.author.display_name}", icon_url=ctx.author.avatar)
         await message.edit("", embed=embed)
 
 
