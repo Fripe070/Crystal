@@ -25,7 +25,7 @@ class mcstatus(commands.Cog):
             "launchermeta.mojang.com",               # Stores hashes in a json file, to use later to get assets
             "libraries.minecraft.net",               # Used for minecraft libraries
             "sessionserver.mojang.com",
-            "api.minecraftservices.com",             # Unsure what this is used for
+            "api.minecraftservices.com",
             "resources.download.minecraft.net",      # Used to get minecraft resources
             "launcher.mojang.com"                    # Used to get version.jar (does not get assets?)
         ]
