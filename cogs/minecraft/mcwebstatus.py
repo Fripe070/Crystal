@@ -32,9 +32,9 @@ class mcstatus(commands.Cog):
                 r = requests.head(f"https://{url}", timeout=2)
 
                 if r.ok:
-                    embed_desc += f"**{url}:**\n<:Green:894954521724350485> {r.status_code} {r.reason}\n"
+                    embed_desc += f"**{url}:**\n<:Green:894954521724350485> {r.status_code} {r.reason}.\n"
                 else:
-                    embed_desc += f"**{url}:**\n<:Yellow:894954521674018877> {r.status_code} {r.reason}\n"
+                    embed_desc += f"**{url}:**\n<:Yellow:894954521674018877> {r.status_code} {r.reason}.\n"
 
             except requests.exceptions.Timeout as error:
                 embed_desc += f"**{url}:**\n<:Red:894954521862766642> Timed out.\n"
