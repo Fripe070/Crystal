@@ -15,14 +15,19 @@ class mcstatus(commands.Cog):
         message = await ctx.reply("Geting statuses from the websites... <a:loading:894950036964782141>")
 
         mc_sites = [
-            "minecraft.net",
-            "mojang.com",
-            "session.minecraft.net",
+            "minecraft.net",                         # Main website
+            "mojang.com",                            # Mojang website, used to change information about mojang accounts
+            "session.minecraft.net",                 # Possibly deprecated
             "authserver.mojang.com",
             "account.mojang.com",
             "api.mojang.com",
-            "textures.minecraft.net",
-            "launchermeta.mojang.com"
+            "textures.minecraft.net",                # Texture assets
+            "launchermeta.mojang.com",               # Stores hashes in a json file, to use later to get assets
+            "libraries.minecraft.net",               # Used for minecraft libraries
+            "sessionserver.mojang.com",
+            "api.minecraftservices.com",             # Unsure what this is used for
+            "resources.download.minecraft.net",      # Used to get minecraft resources
+            "launcher.mojang.com"                    # Used to get version.jar (does not get assets?)
         ]
 
         embed_desc = ""
