@@ -1,3 +1,4 @@
-git+git://github.com/rapptz/discord.py@master
+py-cord
 python-dotenv
 requests
+cairosvg

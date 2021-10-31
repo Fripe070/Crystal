@@ -1,5 +1,8 @@
 .idea/
 
+cogs/listeners/auto_update.py
+update.sh
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python

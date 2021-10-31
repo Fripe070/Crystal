@@ -42,6 +42,11 @@ class mcserverping(commands.Cog):
 **Players:** {server['players']['online']}/{server['players']['max']}
 """
         try:
+            embed_desc += f"**Player list:** ```\n{', '.join(server['players']['list'])}\n```\n"
+        except KeyError:
+            pass
+
+        try:
             embed_desc += f"**Software:** {server['software']}\n"
         except KeyError:
             pass
