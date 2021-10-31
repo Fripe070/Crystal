@@ -77,9 +77,7 @@ class playerinfo(commands.Cog):
             pass
 
         embed.add_field(name="Name history:", value=pastnames)
-
         embed.set_footer(text=f"Command executed by: {ctx.author.display_name}", icon_url=ctx.author.avatar)
-
         await ctx.reply(embed=embed)
 
 
